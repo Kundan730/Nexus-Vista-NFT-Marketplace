@@ -4,7 +4,6 @@ import { redirect, useRouter } from 'next/navigation';
 import { currentUser } from '@clerk/nextjs';
 import Nav from './components/ui/Navigation';
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home() {
 
   const user = await currentUser();
@@ -99,10 +98,6 @@ export default async function Home() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             The Community-Powered NFT Marketplace{' '}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
           <div className="text-center">
