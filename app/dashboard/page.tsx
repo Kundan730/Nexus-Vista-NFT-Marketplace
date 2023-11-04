@@ -1,4 +1,3 @@
-
 const Admin = () => {
   return ( 
 <div className="min-h-full">
