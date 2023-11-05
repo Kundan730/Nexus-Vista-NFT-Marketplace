@@ -10,7 +10,7 @@ import {
 
 import '@fontsource/work-sans';
 import classNames from 'classnames';
-import Image from 'next/image';
+import img from 'next/image';
 import { useState } from 'react';
 const discover = [
   {
@@ -239,59 +239,136 @@ const Crypto = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className="flex flex-col items-center justify-center gap-10 bg-[#2B2B2B] font-worksans lg:gap-20">
-      <nav className="bg-gray-800">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="logo flash (1)_prev_ui.png"
-                  alt="Your Company"
-                />
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
-                  {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                  <a
-                    href="#"
-                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                    aria-current="page"
-                  >
-                    Dashboard
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >
-                    Discover Trends
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >
-                    NFTS
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >
-                    Wallet
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >
-                    Reports
-                  </a>
+        <nav className="min-h-full bg-gray-800 min-w-full">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-8 w-8"
+                    src="logo flash (1)_prev_ui.png"
+                    alt="Your Company"
+                  />
+                </div>
+                <div className="hidden md:block">
+                  <div className="ml-10 flex items-baseline space-x-4">
+                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                    <a
+                      href="#"
+                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                      aria-current="page"
+                    >
+                      Dashboard
+                    </a>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >
+                      Discover Trends
+                    </a>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >
+                      NFTS
+                    </a>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >
+                      Create
+                    </a>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >
+                      Connect to Wallet
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-4 flex items-center md:ml-6">
+              <div className="hidden md:block">
+                <div className="ml-4 flex items-center md:ml-6">
+                  <button
+                    type="button"
+                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">View notifications</span>
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                      />
+                    </svg>
+                  </button>
+                  {/* Profile dropdown */}
+                  <div className="relative ml-3">
+                    <div>
+                      <UserButton />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="-mr-2 flex md:hidden">
+                {/* Mobile menu button */}
                 <button
                   type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                >
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {/* Menu open: "hidden", Menu closed: "block" */}
+                  <svg
+                    className="block h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                  {/* Menu open: "block", Menu closed: "hidden" */}
+                  <svg
+                    className="hidden h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Mobile menu, show/hide based on menu state. */}
+          <div className="md:hidden" id="mobile-menu">
+            <div className="border-t border-gray-700 pb-3 pt-4">
+              <div className="flex items-center px-5">
+                <button
+                  type="button"
+                  className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
@@ -310,201 +387,30 @@ const Crypto = () => {
                     />
                   </svg>
                 </button>
-                {/* Profile dropdown */}
-                <div className="relative ml-3">
-                  <div>
-                    <UserButton />
-                  </div>
-                </div>
               </div>
-            </div>
-            <div className="-mr-2 flex md:hidden">
-              {/* Mobile menu button */}
-              <button
-                type="button"
-                className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span className="absolute -inset-0.5" />
-                <span className="sr-only">Open main menu</span>
-                {/* Menu open: "hidden", Menu closed: "block" */}
-                <svg
-                  className="block h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
+              <div className="mt-3 space-y-1 px-2">
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-                {/* Menu open: "block", Menu closed: "hidden" */}
-                <svg
-                  className="hidden h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* Mobile menu, show/hide based on menu state. */}
-        <div className="md:hidden" id="mobile-menu">
-          <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-            {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-            <a
-              href="#"
-              className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-              aria-current="page"
-            >
-              Dashboard
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
-              Team
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
-              Projects
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
-              Calendar
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
-              Reports
-            </a>
-          </div>
-          <div className="border-t border-gray-700 pb-3 pt-4">
-            <div className="flex items-center px-5">
-              <div className="flex-shrink-0">
-                <img
-                  className="h-10 w-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="ml-3">
-                <div className="text-base font-medium leading-none text-white">
-                  Tom Cook
-                </div>
-                <div className="text-sm font-medium leading-none text-gray-400">
-                  tom@example.com
-                </div>
-              </div>
-              <button
-                type="button"
-                className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              >
-                <span className="absolute -inset-1.5" />
-                <span className="sr-only">View notifications</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="mt-3 space-y-1 px-2">
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-              >
-                Your Profile
-              </a>
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-              >
-                Settings
-              </a>
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-              >
-                Sign out
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div className=" flex w-full items-center justify-between gap-5 px-3 py-[15px] md:py-5 lg:px-5 xl:px-12">
-        <a href="#_" className="max-w-[200px] lg:max-w-[250px]">
-          <Image src={'/assets/nft/logo.svg'} alt="logo" />
-        </a>
-        <div className="hidden items-center gap-5 whitespace-nowrap text-base font-semibold capitalize leading-[22px] text-white md:flex lg:gap-[50px]">
-          {Navitem.map((navitem, index) => {
-            return (
-              <a key={index} href="#_">
-                {navitem}
-              </a>
-            );
-          })}
-        </div>
-        <div
-          className="relative cursor-pointer md:hidden"
-          onClick={() => setIsNavOpen(!isNavOpen)}
-        >
-          <Image src={'/assets/nft/navmenu.svg'} alt="menu" />
-        </div>
-        <div
-          className={`absolute ${
-            isNavOpen
-              ? 'absolute right-0 top-0 z-30 flex h-40 w-fit flex-col items-center justify-center rounded-lg bg-[#201f1f] text-white md:hidden'
-              : 'hidden'
-          } `}
-        >
-          <div
-            className={`w-full flex-col items-end justify-end pr-4 pt-3 ${
-              isNavOpen ? 'flex' : 'hidden'
-            }`}
-            onClick={() => setIsNavOpen(!isNavOpen)}
-          >
-            <h1 className="cursor-pointer text-white">X</h1>
-          </div>
-          <div className="flex h-screen w-full flex-col items-center justify-center gap-2.5 px-6 text-sm font-normal md:hidden">
-            {Navitem.map((navitem, index) => {
-              return (
-                <a key={index} href="#_">
-                  {navitem}
+                  Your Profile
                 </a>
-              );
-            })}
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  Settings
+                </a>
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  Sign out
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </nav>
       <div className="flex flex-col items-center gap-10 px-[15px] capitalize sm:max-w-[590px] md:max-w-[690px] md:gap-20 md:px-0 lg:max-w-[900px] lg:gap-[100px] xl:max-w-[1050px]">
         <div className=" flex w-full flex-col justify-between gap-[30px] sm:flex-row">
           <div className="flex flex-col gap-5 text-start text-white md:max-w-[330px] md:gap-[30px] lg:max-w-[510px]">
@@ -533,17 +439,13 @@ const Crypto = () => {
             </div>
           </div>
           <div className="max-h-[540px] w-full rounded-[20px] text-white md:max-w-[330px] lg:max-w-[510px]">
-            <Image
-              src={'/assets/nft/space.png'}
-              alt="space"
-              className="w-full"
-            />
+            <img src={'/assets/nft/space.png'} alt="space" className="w-full" />
             <div className="flex h-[109px] flex-col justify-start gap-2.5 rounded-b-[20px] bg-[#3B3B3B] px-5 py-[22px]">
               <div className="flex text-[22px] font-semibold leading-[30px]">
                 Space Walking
               </div>
               <div className="flex items-center gap-3">
-                <Image src={'/assets/nft/man.svg'} alt="ani" />
+                <img src={'/assets/nft/man.svg'} alt="ani" />
                 <div className="text-base font-normal leading-[22px]">
                   Animakid
                 </div>
@@ -555,7 +457,7 @@ const Crypto = () => {
               href="#_"
               className=" flex max-w-full items-center justify-center gap-[15px] whitespace-nowrap rounded-[20px] bg-[#A259FF] py-[15px] lg:py-[19px]"
             >
-              <Image src={'/assets/nft/rocket.svg'} alt="rocket" />
+              <img src={'/assets/nft/rocket.svg'} alt="rocket" />
               <button className="text-base font-semibold leading-[22px]">
                 Get Started
               </button>
@@ -597,14 +499,14 @@ const Crypto = () => {
                   } ${i === 2 && 'hidden md:flex'} `}
                 >
                   <div>
-                    <Image src={data.img1} alt="img1" className="w-full" />
+                    <img src={data.img1} alt="img1" className="w-full" />
                   </div>
                   <div className="flex w-full justify-between gap-[15px] sm:flex-row">
                     <div>
-                      <Image src={data.img2} alt="img2" className="w-full" />
+                      <img src={data.img2} alt="img2" className="w-full" />
                     </div>
                     <div>
-                      <Image src={data.img3} alt="img3" />
+                      <img src={data.img3} alt="img3" />
                     </div>
                     <div className="flex max-h-[100px] w-full max-w-[100px] items-center justify-center rounded-[20px] bg-[#A259FF] text-base font-bold leading-[35px] lg:text-[22px]">
                       1025+
@@ -615,7 +517,7 @@ const Crypto = () => {
                       {data.title1}
                     </div>
                     <div className="flex items-center gap-3">
-                      <Image src={data.img4} alt="img4" />
+                      <img src={data.img4} alt="img4" />
                       <div className="text-base font-normal leading-[22px]">
                         {data.title2}
                       </div>
@@ -653,7 +555,7 @@ const Crypto = () => {
                   </div>
                   <div className="flex max-w-[200px] justify-start">
                     <div className="w-[60px] rounded-full bg-white lg:h-[120px] lg:w-[120px]">
-                      <Image src={data.img} alt="img" />
+                      <img src={data.img} alt="img" />
                     </div>
                   </div>
                   <div className="flex flex-col gap-[5px]">
@@ -670,7 +572,7 @@ const Crypto = () => {
             })}
             <div className="flex w-full items-end justify-between px-[10%] sm:hidden">
               <div className="flex w-full max-w-full items-center justify-center gap-[15px] rounded-[20px] border-2 border-[#A259FF] px-[30px] py-[13px] lg:px-[50px]">
-                <Image src={'/assets/nft/rocket.svg'} alt="ranking" />
+                <img src={'/assets/nft/rocket.svg'} alt="ranking" />
                 <button className="text-base font-semibold leading-[22px]">
                   View Rankings
                 </button>
@@ -695,7 +597,7 @@ const Crypto = () => {
                   <div className="relative">
                     <div
                       style={{
-                        backgroundImage: `url(${data?.img})`,
+                        backgroundimg: `url(${data?.img})`,
                         filter: 'blur(8px)',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
@@ -703,7 +605,7 @@ const Crypto = () => {
                       className="flex h-[142px] flex-row items-center justify-center rounded-t-[20px] bg-[#3B3B3B] lg:h-[240px]"
                     ></div>
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <Image src={data.icon} alt="img" />
+                      <img src={data.icon} alt="img" />
                     </div>
                   </div>
                   <div className="h-[67px] whitespace-nowrap rounded-b-[20px] bg-[#3B3B3B] px-5 pt-[30px] text-start text-base font-semibold leading-5 sm:px-[10px] sm:text-xs md:text-base lg:h-[76px] lg:pl-[30px] lg:text-[22px]">
@@ -737,7 +639,7 @@ const Crypto = () => {
                   }`}
                 >
                   <div className="rounded-t-[20px]">
-                    <Image src={data.img} alt="img" className="w-full" />
+                    <img src={data.img} alt="img" className="w-full" />
                   </div>
                   <div className="h-[173px] rounded-b-[20px] bg-[#3B3B3B] py-5">
                     <div className="flex flex-col items-center justify-center gap-[25px]">
@@ -746,7 +648,7 @@ const Crypto = () => {
                           {data.title1}
                         </div>
                         <div className="flex items-center gap-3">
-                          <Image src={data.img1} alt="img1" />
+                          <img src={data.img1} alt="img1" />
                           <div className="!font-spacemono text-base font-normal leading-[22px]">
                             {data.title2}
                           </div>
@@ -780,7 +682,7 @@ const Crypto = () => {
       </div>
       <div className="relative w-full from-transparent to-[#A259FF] bg-cover bg-no-repeat before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-gradient-to-b">
         <div className="w-full">
-          <Image
+          <img
             src={'/assets/nft/nftback.png'}
             alt=""
             className="h-[660px] w-full object-cover object-left-top"
@@ -789,7 +691,7 @@ const Crypto = () => {
         <div className="absolute -bottom-[25%] left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-[30px] sm:-bottom-[10%] sm:gap-20 md:flex-row">
           <div className="flex flex-col gap-[30px]">
             <div className="flex max-w-[151px] items-center justify-center gap-2.5 rounded-[20px] bg-[#3B3B3B] py-[10px] text-white">
-              <Image src={'/assets/nft/mushroom4.png'} alt="Image" />
+              <img src={'/assets/nft/mushroom4.png'} alt="img" />
               <button>Shroomie</button>
             </div>
             <div className="max-w-[375px] text-start text-[38px] font-semibold leading-[45px] text-white sm:whitespace-nowrap">
@@ -834,7 +736,7 @@ const Crypto = () => {
             </div>
           </div>
           <div className="flex w-full items-center justify-center gap-[15px] rounded-[20px] bg-white py-[19px] font-semibold text-[#2B2B2B] sm:hidden">
-            <Image src={'/assets/nft/eye.svg'} alt="Image" />
+            <img src={'/assets/nft/eye.svg'} alt="img" />
             <button>See NFT</button>
           </div>
         </div>
@@ -857,9 +759,9 @@ const Crypto = () => {
                   className=" flex max-h-fit w-full items-center gap-5 rounded-[20px] bg-[#3B3B3B] p-5 sm:h-[337px] sm:flex-col sm:justify-center sm:p-0 md:max-w-[330px] lg:h-[439px]"
                 >
                   <div>
-                    <Image
+                    <img
                       src={data.img}
-                      alt="Image"
+                      alt="img"
                       className="h-[100px] min-w-[100px] sm:h-[150px] lg:h-auto"
                     />
                   </div>
@@ -878,7 +780,7 @@ const Crypto = () => {
         </div>
         <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] px-[15px] sm:h-[360px] sm:flex-row sm:bg-[#3B3B3B] md:items-center md:px-5 lg:h-[430px] lg:gap-10 lg:px-[10px] xl:gap-20 xl:px-0">
           <div>
-            <Image
+            <img
               src={'/assets/nft/weekly.png'}
               alt="week"
               className="w-[400px]"
@@ -905,7 +807,7 @@ const Crypto = () => {
                 href="#"
                 className="flex items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] px-[50px] py-[17px] text-base font-semibold leading-[22px]"
               >
-                <Image src={'/assets/nft/email.svg'} alt="email" />
+                <img src={'/assets/nft/email.svg'} alt="email" />
                 <button className="">Subscribe</button>
               </a>
             </div>
@@ -918,7 +820,7 @@ const Crypto = () => {
               </div>
               <a href="#_">
                 <div className="flex items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] px-[50px] py-[12px] text-base font-semibold leading-[22px]">
-                  <Image src={'/assets/nft/email.svg'} alt="subscribe" />
+                  <img src={'/assets/nft/email.svg'} alt="subscribe" />
                   <button>Subscribe</button>
                 </div>
               </a>
@@ -932,7 +834,7 @@ const Crypto = () => {
             <div className="flex flex-col gap-[25px] text-[#CCCCCC]">
               <a href="#_">
                 <div>
-                  <Image src={'/assets/nft/logo.svg'} alt="Image" />
+                  <img src={'/assets/nft/logo.svg'} alt="img" />
                 </div>
               </a>
               <div className="flex flex-col gap-5">
@@ -945,7 +847,7 @@ const Crypto = () => {
                     {socialicon.map((data, index) => {
                       return (
                         <a key={index} href={data.link}>
-                          <Image src={data.icon} alt={data.alt} />
+                          <img src={data.icon} alt={data.alt} />
                         </a>
                       );
                     })}
@@ -995,7 +897,7 @@ const Crypto = () => {
                   </div>
                   <a href="#_">
                     <div className="flex max-w-[290px] items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] py-[12px] text-base font-semibold leading-[22px]">
-                      <Image src={'/assets/nft/email.svg'} alt="subscribe" />
+                      <img src={'/assets/nft/email.svg'} alt="subscribe" />
                       <button className="text-white">Subscribe</button>
                     </div>
                   </a>
@@ -1004,9 +906,7 @@ const Crypto = () => {
             </div>
           </div>
           <div className=" my-[20px] w-full border border-[#858584]"></div>
-          <div className="flex w-full justify-start text-center text-[#CCCCCC] sm:whitespace-nowrap sm:text-start">
-            Ⓒ NFT Market. Use this template freely.
-          </div>
+          <div className="flex w-full justify-start text-center text-[#CCCCCC] sm:whitespace-nowrap sm:text-start"></div>
         </div>
       </div>
     </div>
