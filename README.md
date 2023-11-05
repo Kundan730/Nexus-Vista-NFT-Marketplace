@@ -85,7 +85,7 @@ Collectible NFTs, such as sports memorabilia or rare trading cards, can be share
 
 High-Value NFT Portfolios:
 
-Investors can create diversified portfolios of high-value NFTs, including digital art, virtual real estate, and collectibles, by purchasing fractions of multiple NFTs within a single platform.
+Investors can create diversified portfolios of high-value NFTs, including digital art, music, virtual real estate, and collectibles, by purchasing fractions of multiple NFTs within a single platform.
 
 Liquidity and Trading:
 
