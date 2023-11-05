@@ -415,14 +415,13 @@ const Crypto = () => {
         <div className=" flex w-full flex-col justify-between gap-[30px] sm:flex-row">
           <div className="flex flex-col gap-5 text-start text-white md:max-w-[330px] md:gap-[30px] lg:max-w-[510px]">
             <div className=" text-start text-[28px] font-semibold capitalize leading-[39px] md:text-[38px] md:leading-[45px] lg:text-[67px] lg:leading-[73px]">
-              Discover<br></br> digital art & Collect NFTs
+              Unlock the World of <br></br>Digital Art & Collect NFTs
             </div>
             <div className="-mt-[10px] text-start text-base font-normal leading-[22px] md:text-base md:leading-[22px]">
-              NFT marketplace UI created with Anima for Figma. Collect, buy and
-              sell art from more than 20k NFT artists.
+            Welcome to our NFT Marketplace UI, powered by Anima for Figma. Dive into a vibrant ecosystem where you can collect, buy, and sell art from over many talented NFT artists.
             </div>
             <div className="hidden gap-[30px] sm:flex sm:flex-col">
-              <div className="flex w-full justify-between gap-[30px]">
+              {/* <div className="flex w-full justify-between gap-[30px]">
                 {discover.map((data, index) => {
                   return (
                     <div key={index} className="w-full max-w-[150px]">
@@ -435,19 +434,19 @@ const Crypto = () => {
                     </div>
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="max-h-[540px] w-full rounded-[20px] text-white md:max-w-[330px] lg:max-w-[510px]">
             <img src={'/image 2.png'} alt="space" className="w-full" />
             <div className="flex h-[109px] flex-col justify-start gap-2.5 rounded-b-[20px] bg-[#3B3B3B] px-5 py-[22px]">
               <div className="flex text-[22px] font-semibold leading-[30px]">
-                Space Walking
+                Horse Riding
               </div>
               <div className="flex items-center gap-3">
                 <img src={'/assets/nft/man.svg'} alt="ani" />
                 <div className="text-base font-normal leading-[22px]">
-                  Animakid
+                  Testnet
                 </div>
               </div>
             </div>
@@ -645,67 +644,6 @@ const Crypto = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full from-transparent to-[#A259FF] bg-cover bg-no-repeat before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-gradient-to-b">
-        <div className="w-full">
-          <img
-            src={'/assets/nft/nftback.png'}
-            alt=""
-            className="h-[660px] w-full object-cover object-left-top"
-          />
-        </div>
-        <div className="absolute -bottom-[25%] left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-[30px] sm:-bottom-[10%] sm:gap-20 md:flex-row">
-          <div className="flex flex-col gap-[30px]">
-            <div className="flex max-w-[151px] items-center justify-center gap-2.5 rounded-[20px] bg-[#3B3B3B] py-[10px] text-white">
-              <img src={'/assets/nft/mushroom4.png'} alt="img" />
-              <button>Shroomie</button>
-            </div>
-            <div className="max-w-[375px] text-start text-[38px] font-semibold leading-[45px] text-white sm:whitespace-nowrap">
-              Magic Mashrooms
-            </div>
-          </div>
-          <div className="flex items-end text-white">
-            <div className="flex h-[144px] w-[295px] flex-col items-center justify-center gap-2.5 rounded-[20px] bg-[#3b3b3b80]">
-              <div className="flex max-w-[235px] flex-col gap-2.5">
-                <div className="!font-spacemono flex w-full items-start">
-                  Auction ends in:
-                </div>
-                <div className="flex gap-2.5">
-                  <div className="flex flex-col gap-[5px]">
-                    <div className="text-[38px] font-bold leading-[45px]">
-                      59
-                    </div>
-                    <div className="text-start text-xs font-normal leading-3">
-                      Hours
-                    </div>
-                  </div>
-                  <div className="text-[38px] font-bold leading-[45px]">:</div>
-                  <div className="flex flex-col gap-[5px]">
-                    <div className="text-[38px] font-bold leading-[45px]">
-                      59
-                    </div>
-                    <div className="text-start text-xs font-normal leading-3">
-                      Minutes
-                    </div>
-                  </div>
-                  <div className="text-[38px] font-bold leading-[45px]">:</div>
-                  <div className="flex flex-col gap-[5px]">
-                    <div className="text-[38px] font-bold leading-[45px]">
-                      59
-                    </div>
-                    <div className="text-start text-xs font-normal leading-3">
-                      Seconds
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full items-center justify-center gap-[15px] rounded-[20px] bg-white py-[19px] font-semibold text-[#2B2B2B] sm:hidden">
-            <img src={'/assets/nft/eye.svg'} alt="img" />
-            <button>See NFT</button>
-          </div>
-        </div>
-      </div>
       <div className="flex w-full flex-col items-center gap-10 capitalize sm:max-w-[590px] md:max-w-[690px] md:gap-20 lg:max-w-[900px] lg:gap-[100px] xl:max-w-[1050px]">
         <div className="flex w-full flex-col justify-center gap-10 px-[15px] text-white md:px-0 lg:gap-[60px]">
           <div className=" flex flex-col justify-start text-start sm:pl-0 lg:gap-2.5">
@@ -742,136 +680,6 @@ const Crypto = () => {
               );
             })}
           </div>
-        </div>
-        <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] px-[15px] sm:h-[360px] sm:flex-row sm:bg-[#3B3B3B] md:items-center md:px-5 lg:h-[430px] lg:gap-10 lg:px-[10px] xl:gap-20 xl:px-0">
-          <div>
-            <img
-              src={'/assets/nft/weekly.png'}
-              alt="week"
-              className="w-[400px]"
-            />
-          </div>
-          <div className="flex w-full flex-col gap-5 text-start text-white md:max-w-[375px] lg:max-w-[425px] lg:gap-10">
-            <div className="flex flex-col gap-2.5">
-              <div className="text-[28px] font-semibold leading-[45px] lg:text-[38px]">
-                Join our weekly digest
-              </div>
-              <div className="text-base font-normal leading-[22px] lg:text-[22px] lg:leading-[35px]">
-                Get exclusive promotions & updates straight to your inbox.
-              </div>
-            </div>
-            <div className="hidden max-w-[425px] items-center justify-between rounded-[20px] bg-white md:flex">
-              <input
-                type="email"
-                name=""
-                id=""
-                placeholder="Enter your email here"
-                className="h-fit w-full rounded-l-[20px] pl-5 text-xs font-normal leading-[22px] text-black outline-none lg:text-base "
-              />
-              <a
-                href="#"
-                className="flex items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] px-[50px] py-[17px] text-base font-semibold leading-[22px]"
-              >
-                <img src={'/assets/nft/email.svg'} alt="email" />
-                <button className="">Subscribe</button>
-              </a>
-            </div>
-            <div className="flex flex-col gap-4 md:hidden">
-              <div className="w-full rounded-[20px] border border-[#A259FF] bg-white py-[12px] text-base normal-case text-black md:max-w-[350px]">
-                <input
-                  className="ml-5 h-fit text-xs font-normal leading-[22px] outline-none lg:text-base"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <a href="#_">
-                <div className="flex items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] px-[50px] py-[12px] text-base font-semibold leading-[22px]">
-                  <img src={'/assets/nft/email.svg'} alt="subscribe" />
-                  <button>Subscribe</button>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className=" flex max-h-fit w-full flex-col items-start justify-center gap-5 bg-[#3B3B3B] pb-[20px] pl-[5%] text-start sm:items-center lg:px-0">
-        <div className="w-full  pr-2.5 sm:max-w-[690px] md:max-w-[900px] md:px-5 xl:max-w-[1050px]">
-          <div className="flex flex-col gap-[30px] pt-[40px] md:flex-row md:justify-between">
-            <div className="flex flex-col gap-[25px] text-[#CCCCCC]">
-              <a href="#_">
-                <div>
-                  <img src={'/assets/nft/logo.svg'} alt="img" />
-                </div>
-              </a>
-              <div className="flex flex-col gap-5">
-                <div className=" lg:max-w-[238px]">
-                  NFT marketplace UI created with Anima for Figma.
-                </div>
-                <div className="flex flex-col gap-[15px]">
-                  <div>Join our community</div>
-                  <div className="flex gap-3">
-                    {socialicon.map((data, index) => {
-                      return (
-                        <a key={index} href={data.link}>
-                          <img src={data.icon} alt={data.alt} />
-                        </a>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex max-w-[240px] flex-col gap-[25px]">
-              <div className="text-[22px] font-bold leading-[35px] text-white">
-                Explore
-              </div>
-              <div className="flex flex-col gap-5 text-base font-normal leading-[22px] text-[#CCCCCC]">
-                {Navitem.map((navitem, index) => {
-                  return (
-                    <a key={index} href="#_">
-                      {navitem}
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="lg flex w-full flex-col gap-[25px] md:max-w-[420px]">
-              <div className="!font-spacemono text-[22px] font-bold capitalize leading-[35px] text-white">
-                Join our weekly digest
-              </div>
-              <div className="flex flex-col gap-5 text-base font-normal leading-[22px] text-[#CCCCCC]">
-                <div className="lg:max-w-[330px]">
-                  Get exclusive promotions & updates straight to your inbox.
-                </div>
-                <div className="hidden w-full max-w-[420px] items-center justify-between rounded-[20px] bg-white sm:flex">
-                  <input
-                    type="email"
-                    name=""
-                    id=""
-                    placeholder="Enter your email here"
-                    className="h-full w-full rounded-l-[20px] pl-5 text-xs font-normal leading-[22px] text-black outline-none lg:text-base "
-                  />
-                  <a href="#_">
-                    <div className="rounded-[20px] bg-[#A259FF] px-[50px] py-[12px] text-base font-semibold leading-[22px] text-white lg:py-[17px]">
-                      <button>Subscribe</button>
-                    </div>
-                  </a>
-                </div>
-                <div className="flex flex-col gap-4 sm:hidden">
-                  <div className="w-full max-w-[290px] rounded-[20px] border border-[#A259FF] bg-white py-[12px] text-base text-black">
-                    <button className="px-5">Enter Your Email Address</button>
-                  </div>
-                  <a href="#_">
-                    <div className="flex max-w-[290px] items-center justify-center gap-[15px] rounded-[20px] bg-[#A259FF] py-[12px] text-base font-semibold leading-[22px]">
-                      <img src={'/assets/nft/email.svg'} alt="subscribe" />
-                      <button className="text-white">Subscribe</button>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=" my-[20px] w-full border border-[#858584]"></div>
-          <div className="flex w-full justify-start text-center text-[#CCCCCC] sm:whitespace-nowrap sm:text-start"></div>
         </div>
       </div>
     </div>
