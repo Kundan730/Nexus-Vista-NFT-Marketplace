@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { redirect, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 
 const Nav = () => {
@@ -19,7 +20,7 @@ const Nav = () => {
     <div className="flex lg:flex-1">
       <a href="#" className="-m-1.5 p-1.5">
         <span className="sr-only">Your Company</span>
-        <img
+        <Image
           className="h-8 w-auto"
           src="/logo flash (1)_prev_ui.png"
           alt=""

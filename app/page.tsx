@@ -3,6 +3,7 @@ import React from 'react';
 import { redirect, useRouter } from 'next/navigation';
 import { currentUser } from '@clerk/nextjs';
 import Nav from './components/ui/Navigation';
+import Image from 'next/image';
 
 export default async function Home() {
 
@@ -21,7 +22,7 @@ export default async function Home() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                <Image
                   className="h-8 w-auto"
                   src="/logo flash (1)_prev_ui.png"
                   alt=""
