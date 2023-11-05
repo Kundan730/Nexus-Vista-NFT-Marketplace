@@ -239,136 +239,59 @@ const Crypto = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className="flex flex-col items-center justify-center gap-10 bg-[#2B2B2B] font-worksans lg:gap-20">
-        <nav className="min-h-full bg-gray-800 min-w-full">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-8 w-8"
-                    src="logo flash (1)_prev_ui.png"
-                    alt="Your Company"
-                  />
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a
-                      href="#"
-                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                      aria-current="page"
-                    >
-                      Dashboard
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Discover Trends
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      NFTS
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Create
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Connect to Wallet
-                    </a>
-                  </div>
-                </div>
+      <nav className="min-h-full bg-gray-800 min-w-full">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <img
+                  className="h-8 w-8"
+                  src="logo flash (1)_prev_ui.png"
+                  alt="test"
+                />
               </div>
               <div className="hidden md:block">
-                <div className="ml-4 flex items-center md:ml-6">
-                  <button
-                    type="button"
-                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                <div className="ml-10 flex items-baseline space-x-4">
+                  {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                  <a
+                    href="/dashboard"
+                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
                   >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                      />
-                    </svg>
-                  </button>
-                  {/* Profile dropdown */}
-                  <div className="relative ml-3">
-                    <div>
-                      <UserButton />
-                    </div>
-                  </div>
+                    Dashboard
+                  </a>
+                  <a
+                    href="#trends"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    Discover Trends
+                  </a>
+                  <a
+                    href="#discover"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    NFTS
+                  </a>
+                  <a
+                    href="#creator"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    Create
+                  </a>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    Connect to Wallet
+                  </a>
                 </div>
               </div>
-              <div className="-mr-2 flex md:hidden">
-                {/* Mobile menu button */}
-                <button
-                  type="button"
-                  className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  aria-controls="mobile-menu"
-                  aria-expanded="false"
-                >
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {/* Menu open: "hidden", Menu closed: "block" */}
-                  <svg
-                    className="block h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
-                  </svg>
-                  {/* Menu open: "block", Menu closed: "hidden" */}
-                  <svg
-                    className="hidden h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
             </div>
-          </div>
-          {/* Mobile menu, show/hide based on menu state. */}
-          <div className="md:hidden" id="mobile-menu">
-            <div className="border-t border-gray-700 pb-3 pt-4">
-              <div className="flex items-center px-5">
+            <div className="hidden md:block">
+              <div className="ml-4 flex items-center md:ml-6">
                 <button
                   type="button"
-                  className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
@@ -387,30 +310,107 @@ const Crypto = () => {
                     />
                   </svg>
                 </button>
-              </div>
-              <div className="mt-3 space-y-1 px-2">
-                <a
-                  href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                >
-                  Sign out
-                </a>
+                {/* Profile dropdown */}
+                <div className="relative ml-3">
+                  <div>
+                    <UserButton />
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="-mr-2 flex md:hidden">
+              {/* Mobile menu button */}
+              <button
+                type="button"
+                className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="absolute -inset-0.5" />
+                <span className="sr-only">Open main menu</span>
+                {/* Menu open: "hidden", Menu closed: "block" */}
+                <svg
+                  className="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                {/* Menu open: "block", Menu closed: "hidden" */}
+                <svg
+                  className="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </nav>
+        </div>
+        {/* Mobile menu, show/hide based on menu state. */}
+        <div className="md:hidden" id="mobile-menu">
+          <div className="border-t border-gray-700 pb-3 pt-4">
+            <div className="flex items-center px-5">
+              <button
+                type="button"
+                className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <span className="absolute -inset-1.5" />
+                <span className="sr-only">View notifications</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div className="mt-3 space-y-1 px-2">
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+              >
+                Your Profile
+              </a>
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+              >
+                Settings
+              </a>
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+              >
+                Sign out
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div className="flex flex-col items-center gap-10 px-[15px] capitalize sm:max-w-[590px] md:max-w-[690px] md:gap-20 md:px-0 lg:max-w-[900px] lg:gap-[100px] xl:max-w-[1050px]">
         <div className=" flex w-full flex-col justify-between gap-[30px] sm:flex-row">
           <div className="flex flex-col gap-5 text-start text-white md:max-w-[330px] md:gap-[30px] lg:max-w-[510px]">
@@ -418,7 +418,9 @@ const Crypto = () => {
               Unlock the World of <br></br>Digital Art & Collect NFTs
             </div>
             <div className="-mt-[10px] text-start text-base font-normal leading-[22px] md:text-base md:leading-[22px]">
-            Welcome to our NFT Marketplace UI, powered by Anima for Figma. Dive into a vibrant ecosystem where you can collect, buy, and sell art from over many talented NFT artists.
+              Welcome to our NFT Marketplace UI, powered by Anima for Figma.
+              Dive into a vibrant ecosystem where you can collect, buy, and sell
+              art from over many talented NFT artists.
             </div>
             <div className="hidden gap-[30px] sm:flex sm:flex-col">
               {/* <div className="flex w-full justify-between gap-[30px]">
@@ -438,7 +440,9 @@ const Crypto = () => {
             </div>
           </div>
           <div className="max-h-[540px] w-full rounded-[20px] text-white md:max-w-[330px] lg:max-w-[510px]">
-            <img src={'/image 2.png'} alt="space" className="w-full" />
+            <a href="https://mumbai.polygonscan.com/address/0x7771eEa8c6f49bE7999e9F31D7D4fAE7c708Afbe">
+              <img src={'/image 2.png'} alt="test" className="w-full" />
+            </a>
             <div className="flex h-[109px] flex-col justify-start gap-2.5 rounded-b-[20px] bg-[#3B3B3B] px-5 py-[22px]">
               <div className="flex text-[22px] font-semibold leading-[30px]">
                 Horse Riding
@@ -477,14 +481,14 @@ const Crypto = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-10 text-white md:px-0 lg:gap-[60px]">
+        <div id='trends' className="flex w-full flex-col gap-10 text-white md:px-0 lg:gap-[60px]">
           <div className="flex flex-col items-start justify-start gap-2.5 text-start">
             <div className="text-[28px] font-semibold leading-[39px] lg:text-[38px] lg:leading-[45px]">
               Trending Collection
             </div>
             <div className="flex justify-between">
               <div className="text-base font-normal md:text-[22px] md:leading-[22px] lg:leading-[35px]">
-                Checkout our weekly updated trending collection.
+                Checkout our vast NFT collection.
               </div>
             </div>
           </div>
@@ -528,7 +532,7 @@ const Crypto = () => {
           </div>
         </div>
         {/* Creator */}
-        <div className="flex w-full max-w-[690px] flex-col justify-center gap-10 text-white sm:mt-0 sm:gap-[60px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1050px]">
+        <div id='creator' className="flex w-full max-w-[690px] flex-col justify-center gap-10 text-white sm:mt-0 sm:gap-[60px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1050px]">
           <div className="flex justify-between text-start sm:px-0">
             <div className="flex flex-col gap-2.5 sm:max-w-[343px] lg:max-w-full">
               <div className="text-[28px] font-semibold leading-[39px] lg:text-[38px] lg:leading-[45px]">
@@ -581,7 +585,7 @@ const Crypto = () => {
         </div>
 
         {/* NFT */}
-        <div className="mt-10 flex w-full flex-col justify-center gap-10 text-white sm:mt-0 lg:gap-[60px]">
+        <div id='discover' className="mt-10 flex w-full flex-col justify-center gap-10 text-white sm:mt-0 lg:gap-[60px]">
           <div className=" flex justify-between text-start">
             <div className="flex flex-col gap-2.5">
               <div className="text-[28px] font-semibold leading-[39px] lg:text-[38px] lg:leading-[45px]">
