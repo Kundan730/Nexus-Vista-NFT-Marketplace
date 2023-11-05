@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid()) @map("_id")
+  externalId                  String   @unique
+  backup_code_enabled         Boolean
+  banned                      Boolean
+  birthday                    String?
+  create_organization_enabled Boolean
+  created_at                  Int
+  delete_self_enabled         Boolean
+  email_addresses             Json[]
+  external_accounts           Json[]
+  external_id                 String?
+  first_name                  String?
+  gender                      String?
+  has_image                   Boolean
+  image_url                   String
+  last_name                   String?
+  last_sign_in_at             Int?
+  object                      String
+  password_enabled            Boolean
+  phone_numbers               Json[]
+  primary_email_address_id    String?
+  primary_phone_number_id     String?
+  primary_web3_wallet_id      String?
+  private_metadata            Json
+  profile_image_url           String
+  public_metadata             Json
+  saml_accounts               Json[]
+  totp_enabled                Boolean
+  two_factor_enabled          Boolean
+  unsafe_metadata             Json
+  updated_at                  Int
+  username                    String?
+  web3_wallets                Json[]
+  createdAt                   DateTime @default(now())
+  updatedAt                   DateTime @updatedAt
+}
+
+model Session {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  externalId     String   @unique
+  abandon_at     Float?
+  actor          String?
+  client_id      String
+  created_at     Float
+  expire_at      Float
+  last_active_at Float
+  object         String
+  status         String
+  updated_at     Float
+  user_id        String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
