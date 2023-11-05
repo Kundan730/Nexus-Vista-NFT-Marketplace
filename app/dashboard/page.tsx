@@ -580,33 +580,7 @@ const Crypto = () => {
             </div>
           </div>
         </div>
-        {/* Browse */}
-        <div className="mt-10 flex w-full flex-col justify-center gap-10 text-white sm:mt-0 sm:gap-[30px] lg:gap-[60px]">
-          <div className="flex justify-start lg:justify-start">
-            <div className="text-[28px] font-semibold leading-[29px] lg:text-[38px] lg:leading-[45px]">
-              Browse Categories
-            </div>
-          </div>
-          <div className="flex max-w-[1050px] flex-wrap items-center justify-around gap-[15px] sm:gap-[25px] md:gap-[30px]">
-            {browse.map((data, index) => {
-              return (
-                <div
-                  key={index}
-                  className="flex w-full max-w-[150px] flex-col overflow-hidden rounded-[20px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[200px] xl:max-w-[240px] "
-                >
-                  <div className="relative">
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <img src={data.icon} alt="img" />
-                    </div>
-                  </div>
-                  <div className="h-[67px] whitespace-nowrap rounded-b-[20px] bg-[#3B3B3B] px-5 pt-[30px] text-start text-base font-semibold leading-5 sm:px-[10px] sm:text-xs md:text-base lg:h-[76px] lg:pl-[30px] lg:text-[22px]">
-                    {data.title}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+
         {/* NFT */}
         <div className="mt-10 flex w-full flex-col justify-center gap-10 text-white sm:mt-0 lg:gap-[60px]">
           <div className=" flex justify-between text-start">
