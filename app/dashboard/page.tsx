@@ -595,15 +595,6 @@ const Crypto = () => {
                   className="flex w-full max-w-[150px] flex-col overflow-hidden rounded-[20px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[200px] xl:max-w-[240px] "
                 >
                   <div className="relative">
-                    <div
-                      style={{
-                        backgroundimg: `url(${data?.img})`,
-                        filter: 'blur(8px)',
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                      }}
-                      className="flex h-[142px] flex-row items-center justify-center rounded-t-[20px] bg-[#3B3B3B] lg:h-[240px]"
-                    ></div>
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                       <img src={data.icon} alt="img" />
                     </div>
