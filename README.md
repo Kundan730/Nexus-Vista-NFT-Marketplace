@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/Kundan730/NEXUS VISTA">
+  <a href="https://github.com/Kundan730/Nexus-Vista-NFT-Marketplace">
     <img src="https://www.nexusvista.tech/logo%20flash%20(1)_prev_ui.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -9,15 +9,6 @@
   <p align="center">
     An New Gen Crowd Sourcing NFT Based Marketplace
     <br/>
-    <br/>
-    <a href="https://github.com/Kundan730/NEXUS VISTA"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/Kundan730/NEXUS VISTA">View Demo</a>
-    .
-    <a href="https://github.com/Kundan730/NEXUS VISTA/issues">Report Bug</a>
-    .
-    <a href="https://github.com/Kundan730/NEXUS VISTA/issues">Request Feature</a>
   </p>
 </p>
 
@@ -39,7 +30,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](https://i.ibb.co/85Yv91F/Screenshot-2023-11-05-131439.png)
 
 NEXUS VISTA is a crowd source NFT Marketplace in which an individual can purchase High value NFT at low cost.
 
@@ -67,6 +58,10 @@ First Install Some Packages before starting
 
 Install Packages
 
+Integrate with the API Keys
+
+Checkout the project - Deployed URL:  [www.nexasvista.tech](https://www.nexusvista.tech/)
+
 ### Installation
 
 First, run the development server:
@@ -77,15 +72,7 @@ yarn dev
 # or
 pnpm dev
 
-
 Open http://localhost:3000 with your browser to see the result.
-
-This project uses next/font to automatically optimize and load Inter, a custom Google Font.
-
-
-Deployed URL:  www.nexasvista.tech
-
-
 
 ## Usage
 
@@ -104,15 +91,6 @@ Liquidity and Trading:
 
 Fractional ownership of NFTs can enhance liquidity as users can trade their ownership shares in the secondary market. This liquidity can make it easier to buy and sell NFT fractions.
 
-
-
-
-
-
-## Roadmap
-
-See the [open issues](https://github.com/Kundan730/NEXUS VISTA/issues) for a list of proposed features (and known issues).
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -120,14 +98,6 @@ Contributions are what make the open source community such an amazing place to b
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
 * Please also read through the [Code Of Conduct](https://github.com/Kundan730/NEXUS VISTA/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
-
-### Creating A Pull Request
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
