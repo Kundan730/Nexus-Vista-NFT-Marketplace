@@ -39,7 +39,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](https://i.ibb.co/85Yv91F/Screenshot-2023-11-05-131439.png)
 
 NEXUS VISTA is a crowd source NFT Marketplace in which an individual can purchase High value NFT at low cost.
 
