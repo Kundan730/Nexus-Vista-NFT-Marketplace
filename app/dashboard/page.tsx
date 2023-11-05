@@ -439,7 +439,7 @@ const Crypto = () => {
             </div>
           </div>
           <div className="max-h-[540px] w-full rounded-[20px] text-white md:max-w-[330px] lg:max-w-[510px]">
-            <img src={'/assets/nft/space.png'} alt="space" className="w-full" />
+            <img src={'/image 2.png'} alt="space" className="w-full" />
             <div className="flex h-[109px] flex-col justify-start gap-2.5 rounded-b-[20px] bg-[#3B3B3B] px-5 py-[22px]">
               <div className="flex text-[22px] font-semibold leading-[30px]">
                 Space Walking

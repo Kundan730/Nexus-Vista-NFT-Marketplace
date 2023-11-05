@@ -5,6 +5,8 @@ import { currentUser } from '@clerk/nextjs';
 import Nav from './components/ui/Navigation';
 import Image from 'next/image';
 
+import HeroSection from "./components/hero/heroSection"
+
 export default async function Home() {
 
   const user = await currentUser();
@@ -138,6 +140,7 @@ export default async function Home() {
           />
         </div>
       </div>
+      <HeroSection />
     </div>
   );
 }
